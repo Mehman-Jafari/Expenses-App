@@ -75,6 +75,8 @@ function resetDefaultBrowser(e) {
 function limitToFixed() {
   const limitFromUser = inputLimitNode.value;
 
+  limitFromUser.value = '';
+
   return limitExpenseNode.textContent = limitFromUser;
 }
 
