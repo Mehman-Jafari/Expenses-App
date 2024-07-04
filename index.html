@@ -1,0 +1,71 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>Expenses App</title>
+    <link rel="stylesheet" href="css/fonts.css" />
+    <link rel="stylesheet" href="css/reset.css" />
+    <link rel="stylesheet" href="css/style.css" />
+  </head>
+  <body>
+    <div class="wrapper">
+      <section class="expenses-block">
+        <div class="expenses-block__container _container">
+          <h1 class="expenses-block__title">Учет расходов</h1>
+          <div class="expenses-block__content-main expenses-content-main">
+            <form action="#" class="expenses-content-main__form form-expenses">
+              <div class="form-expenses__column">
+                <div class="form-expenses__input-block">
+                  <input type="number" class="form-expenses__input js-form-expenses__input" />
+                  <span>руб.</span>
+                </div>
+                <select name="form[]" class="form-expenses__select js-form-expenses__select">
+                  <option value="1" selected>Кафе и рестораны</option>
+                  <option value="2">Транспорт</option>
+                  <option value="3">Ювелирный</option>
+                  <option value="4">Техника</option>
+                  <option value="4">Другое</option>
+                </select>
+              </div>
+              <div class="form-expenses__column">
+                <button class="form-expenses__add-btn js-form-expenses__add-btn button-expenses">Добавить</button>
+              </div>
+            </form>
+            <div class="form-expenses__info-content info-content-expenses">
+              <div class="info-content-expenses__column info-content-expenses_media">
+                <h3 class="info-content-expenses__item-column">Лимит: <span class="js-info-content-expenses__item-column_limit">10000</span> <span>руб.</span><span><img class="modal-open js-modal-open" src="img/modal-open.svg" alt="Картинка"></span></h3>
+                <h3 class="info-content-expenses__item-column">Всего: <span class="js-info-content-expenses__item-column_sum">0</span> <span>руб.</span></h3>
+                <h3 class="info-content-expenses__item-column">Статус: <span class="js-info-content-expenses__item-column_status">Недостаточно информации</span></h3>
+              </div>
+              <div class="info-content-expenses__column info-content-expenses-history info-content-expenses-history_media">
+                    <h3 class="info-content-expenses-history__title">История:</h3>
+                    <ul class="info-content-expenses-history__list js-info-content-expenses-history__list"></ul>
+              </div>
+            </div>
+            <button class="expenses-content-main__clear-btn js-expenses-content-main__clear-btn button-expenses">Сбросить расходы</button>
+          </div>
+        </div>
+      </section>
+    </div>
+
+    <div class="modal js-modal">
+      <div class="modal__container _container">
+        <div class="modal__top top-modal">
+          <h3 class="top-modal__title">Новый лимит</h3>
+          <div class="top-modal__close js-top-modal__close"></div>
+        </div>
+        <div class="modal__main-content main-content-modal">
+          <form action="#" class="main-content-modal__form">
+            <div class="form-expenses__input-block main-content-modal__input-block">
+              <input type="number" class="form-expenses__input js-form-expenses__input-limit" />
+              <span>руб.</span>
+            </div>
+            <button class="main-content-modal__btn js-main-content-modal__btn button-expenses">Задать лимит</button>
+          </form>
+        </div>
+      </div>
+    </div>
+    <script src="js/script.js"></script>
+  </body>
+</html>

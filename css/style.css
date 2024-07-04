@@ -1,0 +1,259 @@
+/* Основные стили */
+.expenses-block {
+  margin-top: 10%;
+}
+
+.expenses-block__container {
+}
+
+.expenses-block__title {
+  font-weight: 700;
+}
+
+.expenses-block__content-main {
+  padding: 40px 0;
+}
+
+.expenses-content-main {
+}
+
+.expenses-content-main__form {
+  display: flex;
+  gap: 30px;
+}
+
+.form-expenses {
+}
+
+.form-expenses__column {
+  flex: 1 1 50%;
+}
+
+.form-expenses__input-block {
+  display: flex;
+  gap: 5px;
+  height: 58px;
+  padding: 0 20px;
+  border: 1px solid var(--color-text-dark);
+  justify-content: center;
+  align-items: center;
+  margin-bottom: 20px;
+}
+
+.form-expenses__input {
+  width: 100%;
+}
+
+.form-expenses__input::-webkit-inner-spin-button {
+  height: 100%;
+  appearance: none;
+}
+
+.form-expenses__select {
+  width: 100%;
+  height: 58px;
+  padding: 0 20px;
+  border: 1px solid var(--color-text-dark);
+}
+
+.form-expenses__add-btn {
+}
+
+.button-expenses {
+  width: 100%;
+  height: 58px;
+  padding: 0 30px;
+  background-color: var(--color-btn);
+  color: var(--color-text-white);
+}
+
+.form-expenses__info-content {
+}
+
+.form-expenses__info-content h3 {
+  margin-bottom: 20px;
+}
+
+.info-content-expenses {
+  display: flex;
+  gap: 30px;
+  padding: 50px 0;
+}
+
+.info-content-expenses__column {
+  flex: 1 1 50%;
+}
+
+.info-content-expenses__item-column {
+  font-weight: 700;
+}
+
+.info-content-expenses__item-column span {
+  font-weight: 400;
+}
+
+.js-info-content-expenses__item-column_limit {
+}
+
+.js-info-content-expenses__item-column_sum {
+}
+
+.js-info-content-expenses__item-column_status {
+}
+
+.info-content-expenses__item-column span.good {
+  color: var(--color-good);
+}
+
+.info-content-expenses__item-column span.error {
+  color: var(--color-warning);
+}
+
+.info-content-expenses-history {
+}
+
+.info-content-expenses-history__title {
+  font-weight: 700;
+}
+
+.info-content-expenses-history__list {
+}
+
+.info-content-expenses-history__item {
+}
+
+.expenses-content-main__clear-btn {
+  background-color: var(--color-warning);
+}
+
+/* Модальное окно */
+.modal {
+  position: absolute;
+  top: 0;
+  left: 0;
+  width: 100%;
+  height: 100%;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  display: none;
+}
+
+.modal.active {
+  display: flex;
+}
+
+.modal::before {
+  content: "";
+  position: absolute;
+  width: 100%;
+  height: 100%;
+  top: 0;
+  left: 0;
+  background-color: var(--color-text-dark);
+  opacity: 0.9;
+}
+
+.modal__container {
+  background-color: var(--color-text-white);
+  width: 100%;
+  padding: 3%;
+  position: relative;
+  z-index: 2;
+}
+
+.modal__top {
+  display: flex;
+  align-items: center;
+  justify-content: space-between;
+}
+
+.top-modal {
+}
+
+.top-modal__title {
+  font-weight: 700;
+}
+
+.top-modal__close {
+  position: relative;
+  width: 40px;
+  height: 40px;
+  cursor: pointer;
+}
+
+.top-modal__close::before {
+  content: "";
+  position: absolute;
+  width: 100%;
+  height: 3px;
+  top: 50%;
+  left: 0;
+  background-color: var(--color-text-dark);
+  border-radius: 2px;
+  transform: rotate(45deg);
+}
+
+.top-modal__close::after {
+  content: "";
+  position: absolute;
+  width: 100%;
+  height: 3px;
+  top: 50%;
+  right: 0;
+  background-color: var(--color-text-dark);
+  border-radius: 2px;
+  transform: rotate(-45deg);
+}
+
+.modal__main-content {
+  padding: 10% 0;
+}
+
+.main-content-modal {
+}
+
+.main-content-modal__form {
+}
+
+.main-content-modal__input-block {
+  background-color: var(--color-text-white);
+}
+
+.js-form-expenses__input-limit {
+}
+
+.main-content-modal__btn {
+}
+
+.modal-open {
+  width: 32px;
+  height: 32px;
+  cursor: pointer;
+}
+
+/* Медиа-запросы */
+@media (max-width: 768px) {
+  .expenses-content-main__form {
+    flex-direction: column;
+    gap: 20px;
+  }
+  .info-content-expenses {
+    flex-direction: column;
+    gap: 30px;
+  }
+  .info-content-expenses-history_media {
+    order: 1;
+  }
+  .info-content-expenses_media {
+    order: 2;
+  }
+  .top-modal__close {
+    width: 30px;
+    height: 30px;
+  }
+  .modal-open {
+    width: 24px;
+    height: 24px;
+  }
+}
